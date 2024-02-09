@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+</head>
+<body>
+</body>
+<script>
+    const input = prompt('Masukan angka pertama :')
+    const input1 = prompt('Masukan angka kedua :')
+    const input3 = prompt('Pilih salah satu : * , / , + , -')
+    if(input3 == '+'){
+        alert(parseInt(input) + parseInt(input1))
+    }else if(input3 == '-'){
+        alert(parseInt(input) - parseInt(input1))
+    }else if(input3 == '/'){
+        alert(parseInt(input) / parseInt(input1))
+    }else if(input3 == '*'){
+        alert(parseInt(input) * parseInt(input1))
+    }else{
+        alert('Operator yg dimasukan salah')
+    }
+</script>
+</html>
