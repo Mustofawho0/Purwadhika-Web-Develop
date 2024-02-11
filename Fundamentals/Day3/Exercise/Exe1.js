@@ -77,12 +77,41 @@ console.log(hurufKebalik);
     Write a code to find the largest of two given integers
         ○ Example : num1 = 42, num2 = 27 → 42
 */
-
+let number = 42,
+  number1 = 27;
+if (number > number1) {
+  console.log(number);
+} else {
+  console.log(number1);
+}
 /*
     Nomor 10 :
     Write a conditional statement to sort three numbers
         ○ Example : num1 = 42, num2 = 27, num3 = 18 → 18, 27, 42
 */
+let num1 = 42,
+  num2 = 27,
+  num3 = 18;
+
+if (num1 < num2 && num1 < num3) { // FALSE --> FALSE = FALSE
+  if (num2 < num3) { // FALSE
+    console.log(`${num1}, ${num2}, ${num3}`);
+  } else {
+    console.log(`${num1}, ${num3}, ${num2}`);
+  }
+} else if (num2 < num1 && num2 < num3) { // FALSE --> FALSE = FALSE
+  if (num1 < num3) { // TRUE
+    console.log(`${num2}, ${num1}, ${num3}`);
+  } else {
+    console.log(`${num2}, ${num3}, ${num1}`);
+  }
+} else if (num3 < num1 && num3 < num2) {
+  if (num1 < num2) {
+    console.log(`${num3}, ${num1}, ${num2}`);
+  } else {
+    console.log(`${num3}, ${num2}, ${num1}`);
+  }
+}
 
 /*
     Nomor 11 :
@@ -97,4 +126,4 @@ console.log(hurufKebalik);
 */
 
 let letter = "An apple a day keeps the doctor away";
-console.log(letter.replace(/a/gi, "*")); // Flag "i" digunakan untuk kasus dimana huruf besar dan huruf kecil diartikan sama. 
+console.log(letter.replace(/a/gi, "*")); // Flag "i" digunakan untuk kasus dimana huruf besar dan huruf kecil diartikan sama.
