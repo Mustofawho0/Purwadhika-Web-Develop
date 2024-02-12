@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let buah = ["Apel", "Jeruk", "Mangga"];
+      let rupiah = [10000, 15000, 20000];
+      let strKosong = "";
+
+      for (i = 0; i < buah.length; i++) {
+        strKosong += [i+1] +' '+ buah[i] + '= Rp. ' + rupiah[i] + '\n'
+      }
+      do {
+        var selectItem = Number(prompt(strKosong));
+        if (selectItem < 1 || selectItem > buah.length || isNaN(selectItem)) {
+          alert("Product tidak di temukan");
+        } else {
+          alert("Product di temukan");
+        }
+      } while (selectItem < 1 || selectItem > buah.length || isNaN(selectItem));
+    </script>
+  </body>
+</html>
