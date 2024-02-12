@@ -20,6 +20,27 @@ for (i = 1; i <= angka1; i++) {
     Write a code to check whether a string is a palindrome or not.
         ○ Example : ‘madam’ → palindrome
 */
+// Menggunakan Method
+let palindrome = "Madam",
+  palindrome1 = palindrome.split("").reverse().join("");
+if (palindrome.toLowerCase() === palindrome1.toLowerCase()) {
+  console.log("Palindrome");
+} else {
+  console.log("Not Palindrome");
+}
+
+// Menggunakan Looping
+let world = "madam";
+let revWord = ""; // 'index 5 [n] decrement'
+for (i = world.length - 1; i >= 0; i--) {
+  // i=5; TRUE; i=4; TRUE;
+  revWord += world[i];
+}
+if (world === revWord) {
+  console.log("is Palindrom");
+} else {
+  console.log("not Palindrom");
+}
 
 /*
     Nomor 3 :
@@ -36,11 +57,17 @@ console.log(`${jarakCM / 100000} km`);
         ○ Example : 1000 → “Rp. 1.000,00”
 */
 
+
+
 /*
     Nomor 5 :
     Write a code to remove the first occurrence of a given “search string” from a string
         ○ Example : string = “Hello world”, search string = “ell” → “Ho world”
 */
+
+let text = "Hello world",
+  text1 = text.replace("ell", "");
+console.log(text1);
 
 /*
     Nomor 6 :
@@ -72,6 +99,17 @@ console.log(hurufKebalik);
         ○ Example : ‘The QuiCk BrOwN Fox’ -> ‘ tHE qUIcK bRoWn fOX’
 */
 
+let str = "The QuiCk BrOwN Fox",
+  str1 = "";
+for (i = 0; i < str.length; i++) {
+  if (str[i] === str[i].toLowerCase()) {
+    str1 += str[i].toUpperCase();
+  } else {
+    str1 += str[i].toLowerCase();
+  }
+}
+console.log(str1);
+
 /*
     Nomor 9 :
     Write a code to find the largest of two given integers
@@ -93,23 +131,29 @@ let num1 = 42,
   num2 = 27,
   num3 = 18;
 
-if (num1 < num2 && num1 < num3) { // FALSE --> FALSE = FALSE
-  if (num2 < num3) { // FALSE
+if (num1 < num2 && num1 < num3) {
+  // FALSE --> FALSE = FALSE
+  if (num2 < num3) {
+    // FALSE
     console.log(`${num1}, ${num2}, ${num3}`);
   } else {
     console.log(`${num1}, ${num3}, ${num2}`);
   }
-} else if (num2 < num1 && num2 < num3) { // FALSE --> FALSE = FALSE
-  if (num1 < num3) { // TRUE
+} else if (num2 < num1 && num2 < num3) {
+  // FALSE --> FALSE = FALSE
+  if (num1 < num3) {
+    // FASLE
     console.log(`${num2}, ${num1}, ${num3}`);
   } else {
     console.log(`${num2}, ${num3}, ${num1}`);
   }
 } else if (num3 < num1 && num3 < num2) {
+  // TRUE --> TRUE = TRUE
   if (num1 < num2) {
+    // FALSE
     console.log(`${num3}, ${num1}, ${num2}`);
   } else {
-    console.log(`${num3}, ${num2}, ${num1}`);
+    console.log(`${num3}, ${num2}, ${num1}`); // EXECUTE
   }
 }
 
@@ -118,6 +162,17 @@ if (num1 < num2 && num1 < num3) { // FALSE --> FALSE = FALSE
     Write a code that shows 1 if the input is a string, 2 if the input is a number, and 3 for others data type.
         ○ Example : “hello” → 1
 */
+
+let input = "hello";
+const inputType = typeof input;
+// console.log(input);
+if (inputType === "string") {
+  console.log("1");
+} else if (inputType === "number") {
+  console.log("2");
+} else {
+  console.log("3");
+}
 
 /*
     Nomor 12 :
