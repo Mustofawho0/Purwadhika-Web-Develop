@@ -73,7 +73,7 @@ console.log(ArrLength([1, 2, 3], [3, 2, 1]));
 
 function AddElementArr(arr, newArr) {
   if (!arr.includes(newArr)) {
-    // " i " : Negasi
+    // " ! " : Negasi
     arr.push(newArr);
   }
   return arr;
