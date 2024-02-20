@@ -22,7 +22,7 @@ newStack.pop();
 newStack.push("Page-04");
 newStack.push("Page-05");
 
-console.log(newStack);
+// console.log(newStack);
 
 // QUEUE
 // FIFO (First In - First Out)
@@ -48,7 +48,7 @@ newStack1.shift();
 newStack1.push("Page-04");
 newStack1.push("Page-05");
 
-console.log(newStack1);
+// console.log(newStack1);
 
 // SET
 const buah = ["Apel", "Anggur", "Mangga", "Apel", "Nangka"];
@@ -59,9 +59,9 @@ newBuah.add("Anggur");
 // console.log(newBuah)
 newBuah.delete("Anggur");
 // console.log(newBuah)
-console.log(newBuah.has("Apel")); // akan bersifat Boolean
+// console.log(newBuah.has("Apel")); // akan bersifat Boolean
 // newBuah.entries('Apel','Anggur')
-console.log(newBuah);
+// console.log(newBuah);
 
 const campus = ["BSD", "JKT", "BDG", "BTM"];
 const newCamp = new Set(campus);
@@ -72,15 +72,15 @@ let text = " ";
 for (const entry of campusEntries) {
   text += entry;
 }
-console.log(text);
+// console.log(text);
 
 newCamp.forEach((item) => {
-  console.log(item);
+//   console.log(item);
 });
 
 campus.forEach((index, item) => {
-  console.log(index);
-  console.log(item);
+//   console.log(index);
+//   console.log(item);
 });
 
 // LINKED LIST
@@ -101,7 +101,7 @@ const list = {
   },
 };
 
-console.log(list.head.next);
+// console.log(list.head.next);
 
 //  Linked List Implementation
 
@@ -195,6 +195,7 @@ class LinkedList {
       return curr.element;
     }
   }
+  // Method RemoveElement in LinkedList
   removeElement(element) {
     let current = this.head;
     let prev = null;
@@ -214,6 +215,19 @@ class LinkedList {
     }
     return null;
   }
+  indexOf(element) {
+    let count = 0;
+    let current = this.head;
+
+    while (current != null) {
+      if (current.element === element) {
+        return count;
+      }
+      count += 1;
+      current = current.next;
+    }
+    return -1;
+  }
 }
 
 const linkedList = new LinkedList();
@@ -223,6 +237,8 @@ linkedList.add("C");
 linkedList.add("D");
 linkedList.insertAt("NewValue", 2);
 linkedList.removeElement("B");
-// linkedList.removeAt(3);
+linkedList.removeAt(3);
 
 linkedList.printList();
+
+console.log(linkedList.indexOf("NewValue"));
