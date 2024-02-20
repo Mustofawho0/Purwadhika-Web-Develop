@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const jamMasuk = Number(prompt("Pilih jam masuk anda : (1-12)"));
+      const waktuMasuk = Number(
+        prompt("Pilih waktu masuk anda \n 1. AM \n 2. PM")
+      );
+      const jamKeluar = Number(prompt("Pilih jam keluar anda : (1-12)"));
+      const waktuKeluar = Number(
+        prompt("Pilih waktu keluar anda \n 1. AM \n 2. PM")
+      );
+
+      const tarifAwal = 10000;
+      const awalMasuk = 3;
+      const tarifBerikutnya = 1500;
+
+      let durasi;
+      if (waktuMasuk === waktuKeluar) {
+        if (jamMasuk == 12) jamMasuk = 0;
+        if (jamMasuk > jamKeluar) {
+          durasi = jamMasuk - jamKeluar;
+        } else if (jamKeluar < jamMasuk) {
+          durasi = jamKeluar + 24 - jamMasuk;
+        }
+      } else if (waktuMasuk !== waktuKeluar) {
+        durasi = jamKeluar + 12 - jamMasuk;
+      }
+      //   alert(durasi)
+      let tarif;
+      if (durasi <= 3) {
+        tarif = tarifAwal;
+      } else {
+        tarif = tarifAwal + (durasi - awalMasuk) * tarifBerikutnya;
+      }
+      alert(`Durasi ${durasi} Jam \nHarga ${tarif} \n`);
+    </script>
+  </body>
+</html>
