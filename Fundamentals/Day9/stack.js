@@ -1,221 +1,172 @@
 // STACK
 // LIFO (Last In - First Out)
 
-class LIFOStack {
+class Stack{
   maxSize = 3;
-  container = [];
-
-  push(data) {
-    if (this.container.length < this.maxSize) {
-      this.container.push(data);
-    }
+  container = []; // [Page-01] [Page01, Page-02] [Page-01, Page-02, Page-03]
+  push(data){
+      if(this.container.length < this.maxSize){ // 3 <= 3?
+          this.container.push(data)
+      }
   }
-  pop() {
-    this.container.pop();
+  pop(){
+      this.container.pop()
   }
 }
-let newStack = new LIFOStack();
-newStack.push("Page-01");
-newStack.push("Page-02");
-newStack.push("Page-03");
-newStack.pop();
-newStack.push("Page-04");
-newStack.push("Page-05");
+let newStack = new Stack()
+newStack.push('Page-01')
+newStack.push('Page-02')
+newStack.push('Page-03')
+newStack.pop()
+newStack.push('Page-04')
+newStack.push('Page-05')
 
-// console.log(newStack);
 
 // QUEUE
-// FIFO (First In - First Out)
-
-class FIFOStack {
+class Queue{
   maxSize = 3;
-  container = [];
-
-  push(data) {
-    if (this.container.length < this.maxSize) {
-      this.container.push(data);
-    }
+  container = []; // [Page-01] [Page01, Page-02] [Page-01, Page-02, Page-03]
+  addData(data){
+      if(this.container.length < this.maxSize){ // 3 <= 3?
+          this.container.push(data)
+      }
   }
-  shift() {
-    this.container.shift();
+  deleteData(){
+      this.container.shift()
   }
 }
-let newStack1 = new FIFOStack();
-newStack1.push("Page-01");
-newStack1.push("Page-02");
-newStack1.push("Page-03");
-newStack1.shift();
-newStack1.push("Page-04");
-newStack1.push("Page-05");
 
-// console.log(newStack1);
 
 // SET
-const buah = ["Apel", "Anggur", "Mangga", "Apel", "Nangka"];
-const newBuah = new Set(buah);
-// console.log(newBuah)
-newBuah.add("Semangka");
-newBuah.add("Anggur");
-// console.log(newBuah)
-newBuah.delete("Anggur");
-// console.log(newBuah)
-// console.log(newBuah.has("Apel")); // akan bersifat Boolean
-// newBuah.entries('Apel','Anggur')
-// console.log(newBuah);
+const fruits = ['Banana', 'Orange', 'Starfruit']
 
-const campus = ["BSD", "JKT", "BDG", "BTM"];
-const newCamp = new Set(campus);
+const newFruits = new Set(fruits)
+newFruits.add('banana')
+newFruits.add('Durian')
+newFruits.delete('banana')
+console.log(newFruits.has('Banana'))
+// newFruits.clear()
 
-const campusEntries = newCamp.entries();
+const campus = ['BSD', 'JKT', 'BDG']
+const setCampus = new Set(campus)
+const campusEntries = setCampus.entries()
 
-let text = " ";
-for (const entry of campusEntries) {
-  text += entry;
+let text = ''
+for(const entry of campusEntries){
+  text += entry
 }
-// console.log(text);
 
-newCamp.forEach((item) => {
-//   console.log(item);
-});
+setCampus.forEach((item) => {
+  console.log(item)
+})
 
-campus.forEach((index, item) => {
-//   console.log(index);
-//   console.log(item);
-});
 
-// LINKED LIST
-// SINGLE LINKED
-const list = {
-  head: {
-    value: 1,
-    next: {
-      value: 2,
-      next: {
-        value: 3,
-        next: {
-          value: 4,
-          next: null,
-        },
-      },
-    },
-  },
-};
+const data = {
+  name: 'Ferry',
+  name: 'Bogor', 
+  school: 'Pwd'
+}
+data.name = 'Bebas'
+console.log(data)
 
-// console.log(list.head.next);
 
-//  Linked List Implementation
 
-class Node {
-  constructor(element) {
-    this.element = element;
-    this.next = null;
+class Node{
+  constructor(element){
+      this.element = element; 
+      this.next = undefined;
   }
 }
 
 class LinkedList {
   constructor() {
     this.head = null;
+      /*
+          head: {
+              element: 'A',
+              next: {
+                  element: 'B', 
+                  next: {
+                      element: 'D',
+                      next: {
+                          element: 'C', 
+                          next: undefined
+                      }
+                  }
+              }
+          }
+      */
     this.size = 0;
   }
-  // ADD ELEMENT
-  add(element) {
-    // Create new node
-    let node = new Node(element);
-    let current;
 
-    if (this.head == null) {
+  add(element) { 
+    let node = new Node(element); 
+   
+    let current;
+    if (this.head == null) { 
       this.head = node;
     } else {
       current = this.head;
-      // iterate to the end of the list
-      // note : end of the list -> next === null
       while (current.next) {
         current = current.next;
       }
-      // add node
-      current.next = node;
+      current.next = node; 
     }
     this.size += 1;
   }
-  // Method printList in LinkedList
-  printList() {
-    var curr = this.head;
-    while (curr) {
-      console.log(curr.element);
-      curr = curr.next;
-    }
-  }
-  // Method insertAt in LinkedList
+
   insertAt(element, index) {
-    if (index < 0 || index > this.size)
-      return console.log("Please Enter a valid index");
-    else {
-      const node = new Node(element);
-      let curr = this.head;
-
-      if (index == 0) {
-        node.next = this.head;
-        this.head = node;
+      if (index < 0 || index > this.size) {
+        return console.log("Please enter a valid index");
       } else {
-        curr = this.head;
-        let prev;
-        let it = 0;
+        const node = new Node(element);
 
-        while (it < index) {
-          it++;
+        let curr = this.head; 
+  
+        if (index == 0) {
+          node.next = this.head; 
+          this.head = node; 
+        } else { 
+          curr = this.head; 
+          let prev;
+  
+          for (let i = 0; i < index; i++) {
+            prev = curr; 
+            curr = curr.next;
+          }
+  
+          prev.next = node;  
+          node.next = curr;
         }
-        for (let i = 0; i < index; i++) {
-          prev = curr;
-          curr = curr.next;
-        }
-        prev.next = node;
-        node.next = curr;
+        this.size += 1;
       }
-      this.size += 1;
-    }
   }
-  // Method removeAt in LinkedList
-  removeAt(index) {
-    if (index < 0 || index >= this.size)
-      return console.log("Please Enter a valid index");
-    else {
-      let curr = this.head;
-      let prev = curr;
 
-      if (index === 0) {
-        this.head = curr.next;
-      } else {
-        for (let i = 0; i < index; i++) {
-          prev = curr;
-          curr = curr.next;
-        }
-        prev.next = curr.next;
+  removeElement(element) { 'D'
+      let current = this.head;
+      let prev = null;
+  
+      while (current != null) {
+        if (current.element === element) {
+          if (prev == null) {
+            this.head = current.next;
+          } else {
+            prev.next = current.next;
+          }
+  
+          this.size -= 1;
+  
+          return current.element;
       }
-      this.size -= 1;
-      return curr.element;
-    }
+  
+          prev = current;
+          current = current.next;
+      }
+  
+      return null;
   }
-  // Method RemoveElement in LinkedList
-  removeElement(element) {
-    let current = this.head;
-    let prev = null;
 
-    while (current != null) {
-      if (current.element === element) {
-        if (prev == null) {
-          this.head = current.next;
-        } else {
-          prev.next = current.next;
-        }
-        this.size -= 1;
-        return current.element;
-      }
-      prev = current;
-      current = current.next;
-    }
-    return null;
-  }
-  indexOf(element) {
+  indexOf(element) { // 'B'
     let count = 0;
     let current = this.head;
 
@@ -223,22 +174,19 @@ class LinkedList {
       if (current.element === element) {
         return count;
       }
+
       count += 1;
       current = current.next;
     }
+
     return -1;
   }
 }
 
-const linkedList = new LinkedList();
-linkedList.add("A");
-linkedList.add("B");
-linkedList.add("C");
-linkedList.add("D");
-linkedList.insertAt("NewValue", 2);
-linkedList.removeElement("B");
-linkedList.removeAt(3);
-
-linkedList.printList();
-
-console.log(linkedList.indexOf("NewValue"));
+let linkedList = new LinkedList()
+linkedList.add('A')
+linkedList.add('B')
+linkedList.add('C')
+linkedList.insertAt('D', 2)
+console.log(linkedList.removeElement('D'))
+console.log(linkedList.head)

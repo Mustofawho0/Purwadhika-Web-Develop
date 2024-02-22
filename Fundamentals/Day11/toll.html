@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    const rute = [
+      "Surabaya",
+      "Ruas Toll",
+      "Solo",
+      "Ruas Tol",
+      "Semarang",
+      "Ruas Tol",
+      "Palimanan",
+      "Ruas Tol",
+      "Cikopo",
+    ];
+    // const price = [
+    //   (mobil = [0, 275500, 0, 22500, 0, 250000, 0, 275000, 0]),
+    //   (truk = [0, 310500, 0, 31500, 0, 275000, 0, 310500, 0]),
+    //   (bus = [0, 29000, 0, 28000, 0, 255000, 0, 290000, 0]),
+    // ];
+
+    const price = [
+      0,
+      [275000, 310000, 290000],
+      (0)[(22500, 31500, 28000)],
+      (0)[(250000, 275000, 255000)],
+      (0)[(275000, 310000, 290000)],
+    ];
+
+    const pintuMasuk = prompt("Pintu Masuk :").toLowerCase();
+    const pintuKeluar = prompt("Pintu Keluar :").toLowerCase();
+    const pilihKendaraan =
+      Number(prompt("Pilih Kendaraan Anda :\n1. Mobil\n2. Truk\n3. Bus")) - 1;
+
+    const indexOfPintuMasuk = rute.indexOf(pintuMasuk);
+  </script>
+</html>

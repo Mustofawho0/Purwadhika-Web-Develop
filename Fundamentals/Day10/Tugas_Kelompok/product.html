@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. search prod => cek nama [input] => ada? tampilin, gak ada? "not found" => for (let x in products) {products[x].name.toLowerCase() === input}
+      // 2. sort prod => asc / dsc => nama, price
+      // 3. update prod => munculin list product => pilih [input => input - 1] => nama, price, unit ? [input => var (nama/price/unit)] => menjadi??? inputChange => input perubahan products[input - 1][var] = inputChange
+      // 4. log out
+
+      class Product {
+        constructor(name, price, unit) {
+          this.name = name;
+          this.price = price;
+          this.unit = unit;
+        }
+      }
+
+      class ManagerMethods {
+        startMenu(products) {
+          const text =
+            "Select Menu: \n 1. Search Product \n 2. Sort Product \n 3. Update Product \n 4. Log Out";
+          let input = prompt(text);
+
+          if (input == 1) {
+            this.search(products);
+          } else if (input == 2) {
+            this.sort(products);
+          } else if (input == 3) {
+            this.update(products);
+          } else if (input == 4) {
+            this.logOut();
+          } else {
+            alert("Input Not Valid");
+            startMenu(products);
+          }
+        }
+
+        search(products) {
+          let input = prompt("Input product name:");
+          for (let x of products) {
+            if (input.toLowerCase() === x.name) {
+              alert(
+                `Name: ${x.name}\nPrice: Rp. ${x.price.toLocaleString(
+                  "id-ID"
+                )}\nUnit: ${x.unit}`
+              );
+              this.startMenu(products);
+            }
+          }
+          alert("gak ada coy");
+          this.startMenu(products);
+        }
+
+        sort(products) {
+          let sortType = prompt("1. ASC\n2. DSC");
+          let sortBase = prompt("1. Name\n2. Price");
+
+          if (sortType == 1 && sortBase == 1) {
+            products.sort((a, b) => a.name.localeCompare(b.name));
+          } else if (sortType == 2 && sortBase == 1) {
+            products.sort((a, b) => b.name.localeCompare(a.name));
+          } else if (sortType == 1 && sortBase == 2) {
+            products.sort((a, b) => a.price - b.price);
+          } else if (sortType == 2 && sortBase == 2) {
+            products.sort((a, b) => b.price - a.price);
+          }
+          let text = "";
+          for (let x of products) {
+            text += `Name: ${x.name} Price: Rp. ${x.price.toLocaleString(
+              "id-ID"
+            )} Unit: ${x.unit}\n`;
+          }
+          alert(text);
+          this.startMenu(products);
+        }
+
+        update(products) {
+          let text = "Select product to be updated:\n";
+          let index = 1;
+          for (let i of products) {
+            text += `${index++}. Name: ${
+              i.name
+            }  Price: Rp. ${i.price.toLocaleString("id-ID")}  Unit: ${
+              i.unit
+            }\n`;
+          }
+          let update = prompt(text);
+          let property = prompt(
+            "Choose property to be updated:\n1. Name\n2. Price\n3. Unit"
+          );
+          let change = prompt("Input new propery value:");
+
+          if (property == 1) {
+            products[Number(update) - 1].name = change;
+          } else if (property == 2) {
+            products[Number(update) - 1].price = Number(change);
+          } else if (property == 3) {
+            products[Number(update) - 1].unit = change;
+          }
+
+          let text2 = "Updated product list:\n";
+          for (let i of products) {
+            text2 += `Name: ${i.name} | Price: Rp. ${i.price.toLocaleString(
+              "id-ID"
+            )} | Unit: ${i.unit}\n`;
+          }
+          alert(text2);
+          this.startMenu(products);
+        }
+
+        logOut() {
+          alert("Bye!");
+        }
+      }
+
+      const products2 = [
+        new Product("wortel", 10_000, "kg"),
+        new Product("kangkung", 3_000, "ikat"),
+        new Product("terong", 7_000, "kg"),
+      ];
+
+      const manager = new ManagerMethods();
+      manager.startMenu(products2);
+    </script>
+  </body>
+</html>
