@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="ShowUser"></h1>
+    <h1 id="ShowPass"></h1>
+
+    <input type="text" placeholder="username" id="username" />
+    <input type="password" placeholder="password" id="password" />
+
+    <button onclick="ShowData()">Submit</button>
+  </body>
+  <script>
+    function ShowData() {
+      let username = document.getElementById("username").value;
+      let password = document.getElementById("password").value;
+
+      if (password.length < 6) {
+        document.getElementById("ShowPass").innerHTML = "Pass nya Kurang";
+      } else {
+        document.getElementById("ShowUser").innerHTML = username;
+        document.getElementById("ShowPass").innerHTML =
+          password.slice(0, 3) + "***";
+
+      }
+    }
+  </script>
+</html>

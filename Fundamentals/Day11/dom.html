@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello, World</h1>
+    <h2 id="Data"></h2>
+    <h1>Hello, World</h1>
+    <h1>Hello, World</h1>
+
+    <h1 id="ShowData"></h1>
+    <input type="text" placeholder="username" id="username" />
+    <input type="password" placeholder="password" id="password" />
+    <button onclick="Bebas()">Submit</button>
+  </body>
+  <script>
+    let tagH2 = (document.getElementById("Data").innerHTML = "JCWD-2702");
+    const totalH1 = document.getElementsByTagName("h1").length;
+
+    for (let i = 0; i < totalH1; i++) {
+      document.getElementsByTagName("h1")[i].innerHTML = "Hello, JCWD";
+    }
+
+    function Bebas() {
+      let username = document.getElementById("username").value; // untuk mendapat inputan
+      let password = document.getElementById("password").value;
+      document.getElementById("ShowData").innerHTML = username;
+    }
+  </script>
+</html>
