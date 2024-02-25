@@ -120,4 +120,243 @@ for (i = 2; i <= fibonaci; i++) {
 console.log(`Hasil Fibonaci dari angka ${fibonaci} adalah ${fibonaci2} \n`);
 // END
 
-console.log(`Exercise Day 3 \n`)
+// START
+console.log(`Exercise Day 3 \n`);
+
+let input = 9;
+const limit = 10;
+
+for (i = 1; i <= limit; i++) {
+  // console.log(i)
+  console.log(`${i} x ${input} = ${input * i}`);
+}
+
+let stringPalindrome = "madam";
+let stringKosong = "";
+// let PalindromeRes = stringPalindrome.split("").reverse().join("");
+// console.log(PalindromeRes)
+for (i = stringPalindrome.length - 1; i >= 0; i--) {
+  stringKosong += stringPalindrome[i];
+}
+if (stringPalindrome === stringKosong) {
+  console.log(`Kalimat "${stringPalindrome}" adalah Palindrom`);
+} else {
+  console.log(`Kalimat "${stringPalindrome}" bukan Palindrom`);
+}
+// if (stringPalindrome.toLowerCase() === PalindromeRes.toLowerCase()) {
+//   console.log(`Kalimat ${stringPalindrome} adalah Palindrom`);
+// } else {
+//   console.log(`Kalimat ${stringPalindrome} bukan Palindrom`);
+// }
+
+const centimeter = 100000;
+console.log(
+  `Convert ${centimeter} Centimeter to Kilometer = ${centimeter / 100000} Km `
+);
+
+const convertNum = 1000000;
+console.log(
+  `Convert ${convertNum} to IDR = Rp. ${convertNum.toLocaleString("id-ID")},00`
+);
+
+const word = "Hello World";
+const replaceWord = word.replace("ell", "");
+console.log(`${word} --> ${replaceWord}`);
+
+const letter = "hello world";
+const capLetter = letter.split(" ");
+for (i = 0; i < capLetter.length; i++) {
+  capLetter[i] = capLetter[i][0].toUpperCase() + capLetter[i].slice(1);
+}
+console.log(`${letter} --> ${capLetter.join(" ")}`);
+
+const helWord = "hello";
+const reverseWord = helWord.split("").reverse().join("");
+console.log(`${helWord} --> ${reverseWord}`);
+
+const caseSwap = "The QuiCk BrOwN Fox";
+let strKosong = "";
+
+for (i = 0; i < caseSwap.length; i++) {
+  if (caseSwap[i] === caseSwap[i].toLowerCase()) {
+    strKosong += caseSwap[i].toUpperCase();
+  } else {
+    strKosong += caseSwap[i].toLowerCase();
+  }
+}
+console.log(`${caseSwap} --> ${strKosong}`);
+
+const number1 = 42;
+const number2 = 7;
+
+if (number1 > number2) {
+  console.log(`${number1}`);
+} else {
+  console.log(`${number2}`);
+}
+
+let num1 = 42;
+let num2 = 50;
+let num3 = 70;
+// let num4 = 20;
+
+if (num1 < num2 && num1 < num3) {
+  if (num2 < num3) {
+    console.log(`${num1}, ${num2}, ${num3}`);
+  } else {
+    console.log(`${num1}, ${num3}, ${num2}`);
+  }
+} else if (num2 < num1 && num2 < num3) {
+  if (num1 < num3) {
+    console.log(`${num2}, ${num3}, ${num1}`);
+  } else {
+    console.log(`${num2}, ${num1}, ${num3}`);
+  }
+} else if (num3 < num1 && num3 < num2) {
+  if (num2 < num1) {
+    console.log(`${num3}, ${num2}, ${num1}`);
+  } else {
+    console.log(`${num3}, ${num1}, ${num2}`);
+  }
+  // } else if (num4 < num1 && num4 < num2 && num4 < num3) {
+  //   if (num1 < num2 && num2 < num3) {
+  //     console.log(`${num4}, ${num1}, ${num2}, ${num3}`);
+  //   } else {
+  //     console.log(`${num4}, ${num3}, ${num2}, ${num1}`);
+  //   }
+}
+
+const showInput = true;
+const typeInput = typeof showInput;
+// console.log(typeInput)
+
+if (typeInput == "string") {
+  console.log(`${showInput} --> 1`);
+} else if (typeInput == "number") {
+  console.log(`${showInput} --> 2`);
+} else {
+  console.log(`${showInput} --> 3`);
+}
+
+const stringInput = "An apple a day keeps the doctor away";
+const changeWord = stringInput.replace(/a/gi, "*");
+
+console.log(changeWord + "\n");
+// END
+
+// START
+console.log(`Day 4 \n`);
+
+// function TrianglePattern(maxValue, num) {
+//   for (i = 1; i <= maxValue; i++) {
+//     let str = ''
+//     for (j = 1; j <= i; j++) {
+//       str += num.toString().padStart(2, 0) + "";
+//       num++
+//     }
+//   }
+//   return maxValue, num
+// }
+// console.log(TrianglePattern(4,1));
+
+let TrianglePattern = 4;
+let count = 1;
+
+for (i = 1; i <= TrianglePattern; i++) {
+  let blankString = "";
+  for (j = 1; j <= i; j++) {
+    blankString += count.toString().padStart(2, 0) + " ";
+    count++;
+  }
+  console.log(blankString);
+}
+let fizzBuzz = 15;
+for (i = 1; i <= fizzBuzz; i++) {
+  if (i % 3 === 0 && i % 5 !== 0) {
+    console.log("Fizz");
+  } else if (i % 5 === 0 && i % 3 !== 0) {
+    console.log("Buzz");
+  } else if (i % 3 === 0 && i % 5 === 0) {
+    console.log("FizzBuzz");
+  } else {
+    console.log(i);
+  }
+}
+
+// function CountFizzBuzz(fizzBuzz) {
+//   for (i = 1; i <= fizzBuzz; i++) {
+//     if (i % 3 === 0 && i % 5 !== 0) {
+//       return "Fizz";
+//     } else if (i % 5 === 0 && i % 3 !== 0) {
+//       return "Buzz";
+//     } else if (i % 3 === 0 && i % 5 === 0) {
+//       return "FizzBuzz";
+//     }
+//   }
+// }
+// console.log(CountFizzBuzz(15));
+
+let weight = 111;
+let height = 170 / 100;
+let bmi = weight / (height * height);
+
+if (bmi <= 18.5) {
+  console.log("Less Weight");
+} else if (bmi >= 18.5 && bmi <= 24.9) {
+  console.log("Ideal");
+} else if (bmi >= 25.0 && bmi <= 29.9) {
+  console.log("Overweight");
+} else if (bmi >= 30.0 && bmi <= 39.9) {
+  console.log("Very Overweight");
+} else if (bmi >= 39.9) {
+  console.log("Obesity");
+}
+// // console.log(bmi)
+
+// function CalculateBody(weight, height) {
+//   bmi = weight / (height * height / 100);
+//   if (bmi <= 18.5) {
+//     return "Less Weight";
+//   } else if (bmi >= 18.5 && bmi <= 24.9) {
+//     return "Ideal";
+//   } else if (bmi >= 25.0 && bmi <= 29.9) {
+//     return "Overweight";
+//   } else if (bmi >= 30.0 && bmi <= 39.9) {
+//     return "Very Overweight";
+//   } else if (bmi >= 39.9) {
+//     return "Obesity";
+//   }
+//   return bmi;
+// }
+// console.log(CalculateBody(111, 170));
+
+// const newArr = [1,2,3,4,5,6,7,8,9,10]
+// let arrBlank = []
+
+// for(i = 1; i < newArr.length; i++){
+//   if(newArr[i] % 2 == 0){
+//     arrBlank.push(newArr[i])
+//   }
+// }
+// console.log(arrBlank)
+
+function OddNumber(newArr) {
+  let arrBlank = [];
+  for (i = 0; i < newArr.length; i++) {
+    if (newArr[i] % 2 == 0) {
+      arrBlank.push(newArr[i]);
+    }
+  }
+  return arrBlank;
+}
+console.log(OddNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+
+function textWord(word) {
+  return word.split(" ");
+}
+console.log(textWord("Hello World"));
+console.log(`\n`);
+// END
+
+// START
+console.log(`Day 5 \n`);
