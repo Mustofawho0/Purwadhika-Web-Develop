@@ -1,0 +1,15 @@
+{
+    "student" : [{
+        "nama" : "Aboy",
+        "hobby" : "Ngoding",
+        "nomorTelp" : 628192837474,
+        "alamat" : "Jalan Sendiri"
+    },
+    {
+        "nama" : "Ryan",
+        "hobby" : "Futsal",
+        "nomorTelp" : 62819270508,
+        "alamat" : "Jalan Berdua"
+    }
+]
+}

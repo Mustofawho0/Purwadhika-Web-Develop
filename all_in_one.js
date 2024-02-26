@@ -360,3 +360,70 @@ console.log(`\n`);
 
 // START
 console.log(`Day 5 \n`);
+
+function inputValue(arrNumber) {
+  let low = arrNumber[0];
+  let high = arrNumber[1];
+  let avg = 0;
+
+  for (let key of arrNumber) {
+    if (key < low) low = key;
+    if (key > high) high = key;
+    avg += key;
+  }
+  return [
+    `Lowest : ${low}, Highest : ${high}, Average : ${avg / arrNumber.length}`,
+  ];
+}
+console.log(inputValue([12, 5, 23, 18, 4, 45, 32]));
+
+function concatArray(arrayString) {
+  return (
+    arrayString.slice(0, arrayString.length - 1).join(", ") +
+    ", and " +
+    arrayString[arrayString.length - 1]
+  );
+}
+console.log(concatArray(["Apple", "Banana", "Cherry", "Date"]));
+
+function splitWord(word) {
+  return word.split(" ");
+}
+console.log(splitWord("Hello World"));
+
+function CalculateArray(int, int1) {
+  let intBlank = [];
+  for (i = 0; i < int.length; i++) {
+    intBlank.push(int[i] + int1[i]);
+  }
+  return intBlank;
+}
+console.log(CalculateArray([1, 2, 3], [3, 2, 1]));
+
+function newElement(arr, newElement) {
+  if (!arr.includes(newElement)) {
+    arr.push(newElement);
+  }
+  return arr;
+}
+console.log(newElement([1, 2, 3, 4], 7));
+
+function removeOddNumber(evenNumber) {
+  let number = [];
+  for (i = 0; i < evenNumber.length; i++) {
+    if (evenNumber[i] % 2 === 0) {
+      number.push(evenNumber[i]);
+    }
+  }
+  return number;
+}
+console.log(removeOddNumber([1, 2, 3, 4, 5, 6]));
+
+// function combineTwoArray(arr, arr1) {
+//   if (arr.includes(arr1)) {
+//     arr.push(arr1);
+//   }
+//   return arr;
+// }
+// console.log(combineTwoArray([1, 2, 3], [4, 5, 6]));
+
