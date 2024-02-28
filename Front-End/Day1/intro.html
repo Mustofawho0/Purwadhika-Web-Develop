@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intro HTML</title>
+    <style>
+      body {
+        padding-left: 100px;
+      }
+      table,
+      tr,
+      th,
+      td {
+        border: 1px solid salmon;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        TITTLE
+     -->
+    <h1>Purwadhika Heading 1</h1>
+    <h2>Purwadhika Heading 2</h2>
+    <h3>Purwadhika Heading 3</h3>
+    <h4>Purwadhika Heading 4</h4>
+    <h5>Purwadhika Heading 5</h5>
+    <h6>Purwadhika Heading 6</h6>
+    <!-- 
+        Paragraph
+     -->
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+      reprehenderit eaque, nobis minus saepe nihil, magnam libero distinctio
+      numquam, iusto delectus voluptates. Voluptas earum placeat assumenda iste
+      vero aliquid. Veniam!
+    </p>
+    <hr />
+    <p>Ini Baris 1</p>
+    <br />
+    <p>Ini Baris 2</p>
+    <!-- Single Tag -->
+
+    <!-- 
+        Text Formatting
+     -->
+    <b>Bold</b>
+    <i>Italic</i>
+    <u>Underlined</u>
+    <em>Emphasized</em>
+    <del>Delete</del>
+    <ins>Inserted</ins>
+    <sub>Sub</sub>
+    <sup>Sup</sup>
+    <!-- 
+        List
+     -->
+    <h1>Daftar Belanja</h1>
+    <ul>
+      <li>Sawi</li>
+      <li>Kiwi</li>
+      <li>Kangkung</li>
+    </ul>
+    <ol>
+      <li>Aboy</li>
+      <li>Ryan</li>
+      <li>Pay</li>
+    </ol>
+    <!-- 
+        TABLE :
+        tr : table row -> membuat baris
+        td : table data -> membuat kolom
+        th : table head
+        colspan : merge colom
+        rowspan : merge row
+     -->
+    <table>
+      <tr>
+        <th>Nomor</th>
+        <th>Nama</th>
+        <th>Hobby</th>
+      </tr>
+      <tr>
+        <td colspan="3">1</td>
+        <td>Aboy</td>
+        <td>Code</td>
+      </tr>
+      <tr>
+        <td rowspan="2">2</td>
+        <td>Aboy2</td>
+        <td>Code</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Aboy3</td>
+        <td>Code</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Aboy4</td>
+        <td>Code</td>
+      </tr>
+    </table>
+    <!-- 
+        ARCHOR TAGS
+       -->
+    <!-- ABSOLUTE LINKS -->
+    <p><a href="https://www.google.com">google</a></p>
+    <p><a href="https://www.youtube.com" target="_blank">youtube</a></p>
+
+    <!-- RELATIVE LINKS -->
+    <p><a href="./relativ.html" target="_blank">Relative Link</a></p>
+
+    <!-- 
+        IMAGE TAGS
+     -->
+    <img
+      src="https://cdnwpedutorenews.gramedia.net/wp-content/uploads/2022/03/08154702/google.jpg"
+      alt="Kantor Google"
+      width="512px"
+      height="341px"
+    />
+    <!-- 
+        FIGURE & CAPTION TAGS
+     -->
+    <figure>
+      <img
+        src="https://cdnwpedutorenews.gramedia.net/wp-content/uploads/2022/03/08154702/google.jpg"
+        alt="Kantor Google"
+        width="512px"
+        height="341px"
+      />
+      <figcaption>Kantor Google &copy 2023</figcaption>
+    </figure>
+    <form action="" method="post">
+      <input
+        type="text"
+        name="Username"
+        id="username"
+        placeholder="Input your Username"
+      />
+      <input
+        type="password"
+        name="Password"
+        id="password"
+        placeholder="Input your Password"
+      />
+      <input
+        type="email"
+        name="Email"
+        id="email"
+        placeholder="Input your Email"
+      />
+      <input type="radio" name="radio" id="radio1" /> Jago
+      <input type="radio" name="radio2" id="radio2" /> Engga
+      <input type="checkbox" name="check" id="check" />
+      <input type="button" value="Submit222" />
+      <button type="submit">
+        Submit
+        <img
+          src="https://cdnwpedutorenews.gramedia.net/wp-content/uploads/2022/03/08154702/google.jpg"
+          alt="Kantor Google"
+          width="20x"
+          height="10px"
+        />
+      </button>
+    </form>
+    <!-- 
+        SELECT FORM
+       -->
+    <select name="" id="">
+      <option value="">Jawa Barat</option>
+      <option value="">Jawa Tengah</option>
+      <option value="">Jawa Pinggir</option>
+      <option value="">Jawa Selatan</option>
+      <option value="">Jawa Utara</option>
+      <option value="">Jawa Timur</option>
+      <option value="">Jawa Barat Daya</option>
+      <option value="">Jawa Barat Laut</option>
+      <option value="">Jawa Timur Laut</option>
+    </select>
+
+    <!-- 
+        LABEL FIELD & LEGEND TAGS
+     -->
+    <p>
+      <label for="user">Username</label>
+      <input type="text" name="username" id="" />
+    </p>
+    <fieldset>
+      <legend>Form Login</legend>
+      <label for="user">Username :</label>
+      <input type="text" name="username" id="user" /><br /><br />
+      <label for="password">Password :</label>
+      <input type="password" name="password" id="" /><br /><br />
+      <button type="submit">Submit</button>
+    </fieldset>
+    <!-- 
+        DIVISION TAGS
+     -->
+    <div>
+      <h1>Hello</h1>
+    </div>
+    <!-- 
+        Inline Element: Width = Content; Height = Content
+        Block Element: Width = 100% Viewport; Height = Content
+    -->
+    <!-- 
+        Inline Element
+    -->
+    <span style="background-color: bisque"> A </span>
+    <span> B </span>
+    <!-- 
+        Block Element
+     -->
+    <div style="background-color: aquamarine">Bebas</div>
+  </body>
+</html>
