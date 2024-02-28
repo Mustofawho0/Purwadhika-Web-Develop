@@ -1,0 +1,20 @@
+/* :root {
+  font-size: 10px;
+} */
+
+.wrapper-01 > .inner-01 {
+  width: 100px;
+}
+.wrapper-01 > .inner-01 > p {
+  font-size: 2em;
+}
+
+.wrapper-02 > p {
+  font-size: 3rem;
+}
+@media screen and(max-width : 800px) {
+  .wrapper-01,
+  .wrapper-02 {
+    width: 100%;
+  }
+}
