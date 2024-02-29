@@ -1,0 +1,20 @@
+.grid {
+  height: 500px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+}
+
+.grid div:nth-child(odd) {
+  background-color: rgb(86, 226, 245);
+}
+.grid div:nth-child(even) {
+  background-color: aquamarine;
+}
+.merge-col {
+  grid-column: 4/6;
+}
+.merge-row {
+  grid-row: 1/3;
+}

@@ -1,0 +1,63 @@
+body {
+  margin: 100px;
+}
+
+.box-01 {
+  width: 100px;
+  height: 100px;
+  background-color: salmon;
+}
+
+.box-02 {
+  width: 100px;
+  height: 100px;
+  background-color: slateblue;
+  position: relative;
+  bottom: 125px;
+}
+
+.box-03 {
+  width: 100px;
+  height: 100px;
+  background-color: yellowgreen;
+}
+
+.box-04 {
+  width: 100px;
+  height: 100px;
+  background-color: salmon;
+}
+
+.box-05 {
+  width: 100px;
+  height: 100px;
+  background-color: slateblue;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.box-06 {
+  width: 100px;
+  height: 100px;
+  background-color: yellowgreen;
+}
+
+.navbar {
+  width: 100%;
+  height: 30px;
+  background-color: black;
+  color: white;
+  position: fixed;
+  top: 0px;
+}
+
+.socmed {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  position: sticky;
+  top: 100px;
+  color: white;
+  font-size: 20px;
+}

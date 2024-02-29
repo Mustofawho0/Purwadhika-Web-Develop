@@ -1,0 +1,31 @@
+/* Mobile */
+/* 0px - 480px */
+.pwd {
+  color: red;
+}
+
+/* Tablet */
+/* 481px - 768px */
+@media screen and (min-width: 481px) {
+  .pwd {
+    color: blue;
+  }
+}
+
+/* Laptop, dst */
+/* 769px - dst */
+@media screen and (min-width: 796px) {
+  .pwd {
+    color: black;
+  }
+}
+
+.pwd {
+  color: red;
+  @media screen and (min-width: 481px) {
+    color: blue;
+  }
+  @media screen and (min-width: 769px) {
+    color: black;
+  }
+}

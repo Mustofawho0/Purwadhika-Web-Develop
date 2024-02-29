@@ -1,0 +1,75 @@
+.parent01{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.parent01 div:nth-child(odd){
+  background-color: blueviolet;
+  height: 100px;
+}
+
+.parent01 div:nth-child(even){
+  background-color: yellowgreen;
+  height: 100px;
+}
+
+
+
+.parent02{
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+}
+
+.parent02 div:nth-child(odd){
+  background-color: burlywood;
+  height: 100px;
+}
+
+.parent02 div:nth-child(even){
+  background-color: orangered;
+  height: 100px;
+}
+
+
+.parent03{
+  height: 500px;
+  margin-top: 100px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 2fr 3fr;
+}
+
+.parent03 div:nth-child(odd){
+  background-color: burlywood;
+}
+
+.parent03 div:nth-child(even){
+  background-color: orangered;
+}
+
+.parent04{
+  height: 500px;
+  margin-top: 200px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: 1fr 1fr;
+}
+
+.firstbox{
+  grid-column: 1/4;
+}
+
+.secondbox{
+  grid-column: 4/10;
+}
+
+.parent04 div:nth-child(odd){
+  background-color: rgb(255, 145, 0);
+}
+
+.parent04 div:nth-child(even){
+  background-color: rgb(62, 255, 4);
+}

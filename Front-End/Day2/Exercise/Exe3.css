@@ -1,0 +1,24 @@
+.large-screen {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  height: 500px;
+}
+.large-screen div {
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 481px) {
+  .large-screen {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .large-screen {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
