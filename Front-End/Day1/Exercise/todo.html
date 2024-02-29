@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo HTML</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Input data</legend>
+      <label for="Todo">Todo :</label>
+      <input type="text" name="todo" id="todo" placeholder="Input your Todo" />
+      <button type="submit" onclick="addData()">Submit</button>
+    </fieldset>
+    <table>
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Name</th>
+        </tr>
+      </thead>
+      <tbody id="tableData"></tbody>
+    </table>
+  </body>
+  <script>
+    const todo1 = ["Belajar", "Main", "Ngoding"];
+
+    function ShowData() {
+      let result = "";
+
+      todo1.forEach((item, index) => {
+        result += `
+        <tr>
+            <td>${index + 1}</td>
+             <td>${item}</td>
+            <td><button onclick="deleteData(${index})">Hapus</button></td>
+        </tr>
+        `;
+      });
+      document.getElementById("tableData").innerHTML = result;
+    }
+    function addData() {
+      let addTodo = document.getElementById("todo").value;
+      todo1.push(addTodo);
+      //   document.getElementById("tableData").innerHTML = addTodo;
+      ShowData();
+    }
+    function deleteData(index) {
+      const validasi = confirm("Yakin hapus ?");
+      if (validasi === true) {
+        todo1.splice(index, 1);
+        ShowData();
+      }
+    }
+
+    ShowData();
+  </script>
+</html>
