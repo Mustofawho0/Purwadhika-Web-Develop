@@ -3,9 +3,7 @@ function HomePage() {
   return (
     <>
       <h1>Home Page!</h1>
-      <Button 
-      text = 'Button Home'
-      />
+      <Button text="Button Home" page="home" />
     </>
   );
 }

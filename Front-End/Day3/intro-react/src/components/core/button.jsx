@@ -1,17 +1,15 @@
 import styled from "styled-components";
-function Button(props) {
-  console.log(props) 
+function Button({ text, page }) {
+  // console.log(props)
   const ButtonStyle = styled.button`
-    background-color: red;
+    background-color: ${page === "home" ? "red" : "blue"};
     font-size: 20px;
     color: yellow;
   `;
 
   return (
     <>
-      <ButtonStyle>
-        {props.text}
-      </ButtonStyle>
+      <ButtonStyle>{text}</ButtonStyle>
     </>
   );
 }
