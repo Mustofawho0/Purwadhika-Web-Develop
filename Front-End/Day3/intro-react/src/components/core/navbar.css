@@ -1,0 +1,18 @@
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  background-color: grey;
+  height: 30px;
+}
+li {
+  font-size: 20px;
+  text-align: center;
+}
+li a {
+  text-decoration: none;
+  color: black;
+  /* margin-left: 20px; */
+  padding-right: 30px;
+}
