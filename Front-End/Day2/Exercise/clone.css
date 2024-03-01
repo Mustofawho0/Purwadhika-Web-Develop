@@ -1,0 +1,113 @@
+body {
+  margin: 0px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 230px;
+  align-items: center;
+  margin-top: 20px;
+  /* position: sticky; */
+  /* top: 0px; */
+  /* color: rgb(0, 0, 0); */
+}
+.nav-bar {
+  padding: 0px 100px 0px 100px;
+  margin-right: 30px;
+  font-family: Calibri;
+}
+
+img {
+  height: 30px;
+  background-color: transparent;
+}
+
+ul {
+  float: right;
+  margin: 20px 100px;
+}
+li {
+  display: inline;
+  list-style-type: none;
+}
+li a {
+  text-decoration: none;
+  margin-right: 50px;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  border: 1px solid gray;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.banner {
+  background-image: url("./makanan.jpg");
+  height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+hr {
+  margin-top: 100px;
+}
+
+.h1-head {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-left: 200px;
+}
+
+.content {
+  padding: 50px 30px;
+  margin: auto;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: auto;
+  padding: 0px 200px;
+}
+
+.menu img {
+  width: 300px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.menu p {
+  font-family: Calibri;
+  font-size: 22px;
+}
+
+.h1-line {
+  font-size: 1em;
+  padding-top: 50px;
+  /* font-family: Cochin; */
+}
+.h1-line h1 {
+  font-family: Calibri;
+}
+
+.h1-line p {
+  font-size: 18px;
+  text-align: justify;
+}
+
+.check {
+  color: green;
+}
+
+.h1-line-01 {
+  text-align: justify;
+  font-family: Calibri;
+}
+.h1-line-01 h1 {
+  padding-top: 20px;
+}
+
+.h1-line-01 p {
+  text-align: justify;
+  font-family: Calibri;
+  font-size: 18px;
+}
