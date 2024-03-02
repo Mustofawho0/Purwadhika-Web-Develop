@@ -6,7 +6,7 @@ export default function NavBar() {
       <ul>
         <li>
           <a href="">Home</a>
-        </li>
+        </li> 
         <li>
           <a href="">Page</a>
         </li>
