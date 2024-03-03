@@ -9,6 +9,7 @@ function Button({ text, page }) {
 
   return (
     <>
+      {/* <button onClick={props.testAlert}>Klik me</button> */}
       <ButtonStyle>{text}</ButtonStyle>
     </>
   );
