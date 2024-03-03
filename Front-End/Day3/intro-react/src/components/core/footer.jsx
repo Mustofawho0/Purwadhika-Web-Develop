@@ -10,9 +10,8 @@ export default function Footer() {
       }}
     >
       <p>
-        <b>&copy;</b>2024 JCWD-2702
+        All Right Reserved <b>&copy;</b>2024 JCWD-2702
       </p>
-      ;
     </div>
   );
 }
