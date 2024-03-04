@@ -7,6 +7,7 @@ import NavBar from "./components/core/navbar";
 import Footer from "./components/core/footer";
 import Introduce from "./pages/introduce/intro";
 import InputValue from "./components/core/input";
+import TestTailwind from "./pages/tailwind";
 
 function App() {
   function ThisAlert() {
@@ -15,26 +16,27 @@ function App() {
 
   const [getNewName, setNewName] = useState("");
   function changeNameValue() {
-    setNewName("hahahaha");
+    setNewName("bjir");
   }
   const [getInput, newInput] = useState("");
 
   function changeValuebyInput() {
-    newInput('hahaha');
+    newInput("hahaha");
     // console.log(newInput);
   }
   return (
     <>
       <NavBar />
-      <Introduce newValue={getNewName} />
+      {/* <TestTailwind /> */}
+      {/* <Introduce newValue={getNewName} /> */}
       {/* <p>{getNewName}</p> */}
-      <button onClick={() => changeNameValue()}>Ubah Nama</button>
-      <ThisIsAlert clickMe={ThisAlert} />
-      <hr />
-      <InputValue newInputValue={getInput} />
-      <button onClick={() => changeValuebyInput()} type="submit">
+      {/* <button onClick={() => changeNameValue()}>Ubah Nama</button> */}
+      {/* <ThisIsAlert clickMe={ThisAlert} /> */}
+      {/* <hr /> */}
+      {/* <InputValue newInputValue={getInput} /> */}
+      {/* <button onClick={() => changeValuebyInput()} type="submit">
         Submit
-      </button>
+      </button> */}
       <div style={{ minHeight: "100vh" }}>
         <Outlet />
       </div>
