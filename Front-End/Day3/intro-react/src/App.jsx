@@ -28,15 +28,15 @@ function App() {
     <>
       <NavBar />
       {/* <TestTailwind /> */}
-      {/* <Introduce newValue={getNewName} /> */}
+      <Introduce newValue={getNewName} />
       {/* <p>{getNewName}</p> */}
-      {/* <button onClick={() => changeNameValue()}>Ubah Nama</button> */}
-      {/* <ThisIsAlert clickMe={ThisAlert} /> */}
-      {/* <hr /> */}
-      {/* <InputValue newInputValue={getInput} /> */}
-      {/* <button onClick={() => changeValuebyInput()} type="submit">
+      <button onClick={() => changeNameValue()}>Ubah Nama</button>
+      <ThisIsAlert clickMe={ThisAlert} />
+      <hr />
+      <InputValue newInputValue={getInput} />
+      <button onClick={() => changeValuebyInput()} type="submit">
         Submit
-      </button> */}
+      </button>
       <div style={{ minHeight: "100vh" }}>
         <Outlet />
       </div>
